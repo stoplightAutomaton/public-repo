@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: yaml
+  version: '1.0'
+servers:
+  - description: Localhost
+    url: 'http://localhost:3000'
+  - url: 'https://dev-mi-api.mydomain.com'
+    description: Dev
+  - url: 'https://staging-api.mydomain.com'
+    description: Staging
+  - url: 'https://api.mydomain.com'
+    description: Production
+paths:
+  '/days/{dayId}':
+    parameters:
+      - type: string
+        name: dayId
+        in: path
+        required: true
+    get:
+      summary: get day
+      tags:
+        - monday
+      responses: {}
+components:
+  schemas: {}
