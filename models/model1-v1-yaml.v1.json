@@ -1,0 +1,9 @@
+{
+  "title": "model1.v1.yaml",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    }
+  }
+}

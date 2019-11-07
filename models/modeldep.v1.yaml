@@ -1,0 +1,19 @@
+title: modeldep
+type: object
+properties:
+  id:
+    $ref: ./model0.v1.yaml
+  name:
+    $ref: ./model0.v1.yaml
+  fee:
+    $ref: ./model1.v1.yaml
+  feee:
+    $ref: ./model3.v1.yaml
+  vat:
+    type: array
+    items:
+      $ref: ./model3.v1.yaml
+  thing:
+    $ref: ./model8.v1.yaml
+  why not:
+    type: string
