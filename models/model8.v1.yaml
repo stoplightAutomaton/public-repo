@@ -1,5 +1,0 @@
-title: model8
-type: object
-properties:
-  id:
-    $ref: ./model5.v1.yaml

@@ -1,5 +1,0 @@
-title: model9
-type: object
-properties:
-  id:
-    type: string
