@@ -3,3 +3,5 @@ type: object
 properties:
   id:
     type: string
+  name:
+    $ref: ./model6.v1.yaml

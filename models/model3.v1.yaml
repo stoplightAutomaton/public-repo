@@ -3,3 +3,7 @@ type: object
 properties:
   id:
     $ref: ./model0.v1.yaml
+  name:
+    type: string
+  thing:
+    $ref: ./model3.v1.yaml

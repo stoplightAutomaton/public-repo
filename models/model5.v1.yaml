@@ -2,4 +2,4 @@ title: model5
 type: object
 properties:
   id:
-    type: string
+    $ref: ./model4.v1.yaml
