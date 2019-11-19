@@ -1,0 +1,11 @@
+title: Model
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  weightInGrams:
+    type: integer
+  heightInCentimeters:
+    type: integer
