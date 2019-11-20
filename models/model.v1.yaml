@@ -9,3 +9,5 @@ properties:
     type: integer
   heightInCentimeters:
     type: integer
+  isImpeachable:
+    type: boolean
