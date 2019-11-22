@@ -11,3 +11,5 @@ properties:
     type: integer
   isImpeachable:
     type: boolean
+  isLethal:
+    type: boolean
