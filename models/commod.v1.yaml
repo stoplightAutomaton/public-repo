@@ -1,0 +1,7 @@
+title: ComMod
+type: object
+x-tags:
+  - Common
+properties:
+  id:
+    type: string
