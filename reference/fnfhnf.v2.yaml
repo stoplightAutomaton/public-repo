@@ -6,6 +6,62 @@ info:
     name: nem
 servers:
   - url: 'http://localhost:3000'
-paths: {}
+paths:
+  '/users/{userId}':
+    post:
+      summary: ''
+      operationId: post-users
+      responses:
+        '200':
+          description: OK
+    parameters:
+      - schema:
+          maxLength: 0
+          minLength: 0
+          enum:
+            - '1'
+            - '2'
+          default: '1'
+          type: string
+        name: userId
+        in: path
+        description: ioplhuopl;h
+    get:
+      summary: ''
+      operationId: get-users-userId
+      responses:
+        '200':
+          description: OK
+          headers:
+            header-0:
+              schema:
+                type: string
+                enum:
+                  - '1'
+                default: '2'
+                maxLength: 3
+                minLength: 0
+              description: ''
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: gsrgedhethr
+    put:
+      summary: ''
+      operationId: put-users-userId
+      responses:
+        '200':
+          description: OK
+          headers:
+            header-0:
+              schema:
+                type: string
+                enum:
+                  - '1'
+                default: '2'
+                maxLength: 3
+                minLength: 4
+              description: geegrw
 components:
   schemas: {}

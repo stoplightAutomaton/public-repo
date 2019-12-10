@@ -6,6 +6,23 @@ info:
     name: nem
 servers:
   - url: 'http://localhost:3000'
-paths: {}
+paths:
+  /things:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      operationId: get-things
+      responses:
+        '200':
+          description: OK
+          headers:
+            header-0:
+              schema:
+                type: string
+                enum:
+                  - '1'
+                default: '2'
+                maxLength: 3
+                minLength: 4
 components:
   schemas: {}
