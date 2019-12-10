@@ -17,16 +17,5 @@ paths:
       tags: []
       responses: {}
       operationId: get-users-userId-
-  '/poops/{poopId}':
-    parameters:
-      - type: string
-        name: poopId
-        in: path
-        required: true
-    get:
-      summary: Your GET endpoint
-      tags: []
-      responses: {}
-      operationId: get-poops-poopId-
 components:
   schemas: {}
