@@ -1,0 +1,5 @@
+title: kihihhi
+type: object
+properties:
+  id:
+    $ref: 'https://dojo-stg.stoplight-dev.com/api/nodes.raw?srn=gh/stoplightio/studio-demo/reference/todos/models/todo-full.v1.json'
