@@ -1,0 +1,157 @@
+swagger: '2.0'
+info:
+  title: Asset Manager
+  version: '1.0'
+  contact:
+    name: Stoplight Support
+    email: support@stoplight.io
+    url: 'https://support.stoplight.io'
+  description: Asset manager is an API overlay for managing assets as they travel through the deployment pipeline.
+host: 'localhost:3000'
+schemes:
+  - https
+  - http
+produces:
+  - application/json
+consumes:
+  - application/json
+paths:
+  /assets:
+    get:
+      summary: Retrieve a list of assets
+      tags:
+        - Asset
+      responses:
+        '200':
+          description: An array of assets matching the incoming request
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Asset'
+          headers:
+            X-Request-ID:
+              type: string
+              description: Server-side ID for request tracking
+              required: true
+      operationId: get-assets
+      description: Retrieve a list of assets from the asset manager API
+      parameters:
+        - type: array
+          in: query
+          name: filter
+          description: Array of key=value pairs for filtering results
+          minLength: 0
+          maxLength: 0
+        - type: integer
+          in: query
+          name: offset
+          description: Number to offset returned results by
+        - type: integer
+          in: query
+          name: limit
+          description: Number of results that should be returned
+      security:
+        - API-Key: []
+    post:
+      summary: Create a new asset
+      operationId: post-assets
+      responses:
+        '200':
+          description: OK
+      description: Create a new asset for management within a pipeline
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties: {}
+  '/assets/{assetID}':
+    parameters:
+      - type: string
+        name: assetID
+        in: path
+        required: true
+    get:
+      summary: Retrieve an asset
+      tags: []
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/Asset'
+      operationId: 'get-assets-{assetID}'
+      description: "Retrieve an asset by it's asset ID."
+    patch:
+      summary: Update an asset
+      operationId: 'patch-assets-{assetID}'
+      responses:
+        '200':
+          description: OK
+    delete:
+      summary: Remove an asset
+      operationId: 'delete-assets-{assetID}'
+      responses:
+        '200':
+          description: OK
+definitions:
+  Asset:
+    type: object
+    title: Asset
+    additionalProperties: false
+    description: A prototypical asset being passed through an asset pipeline
+    properties:
+      id:
+        type: integer
+        description: Unique asset identifier
+        format: int64
+        example: '12345'
+      name:
+        type: string
+        description: Name of the asset
+        example: Holocene
+      description:
+        type: string
+        description: Long-field description of the asset
+        example: Requested by on-staff manager for resourcing outbound priorities
+      created_at:
+        type: string
+        format: date-time
+        description: When the asset was created
+      updated_at:
+        type:
+          - string
+          - 'null'
+        format: date-time
+        description: When the asset was last updated in the pipeline
+      pipeline_id:
+        type: integer
+        description: "The ID of the asset's pipeline"
+      owner_id:
+        type:
+          - integer
+          - 'null'
+        description: The ID of the owner of the asset
+      metadata:
+        type: object
+        description: Customizable metadata field for storage of structured metadata about the asset
+    required:
+      - id
+      - name
+      - pipeline_id
+    x-tags:
+      - Asset
+  wtfisassetmanager:
+    title: wtfisassetmanager
+    type: object
+    properties:
+      id:
+        type: string
+securityDefinitions:
+  API-Key:
+    name: API Key
+    type: apiKey
+    in: header
+    description: 'Asset manager API key, retrieved from account settings'
+basePath: /1
+security:
+  - API-Key
