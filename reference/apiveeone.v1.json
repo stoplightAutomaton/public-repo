@@ -13,5 +13,14 @@
       "url": "http://localhost:3000"
     }
   ],
-  "paths": {}
+  "paths": {
+    "/toms": {
+      "get": {
+        "summary": "get tom",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-toms"
+      }
+    }
+  }
 }
