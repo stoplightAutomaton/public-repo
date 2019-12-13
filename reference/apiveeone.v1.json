@@ -20,6 +20,15 @@
         "tags": [],
         "responses": {},
         "operationId": "get-toms"
+      },
+      "post": {
+        "summary": "post Toms",
+        "operationId": "post-toms",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     }
   }
