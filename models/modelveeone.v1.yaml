@@ -1,0 +1,7 @@
+title: ModelVeeOne
+type: object
+properties:
+  id:
+    type: string
+  something:
+    type: string
