@@ -19,7 +19,8 @@
         "summary": "get tom",
         "tags": [],
         "responses": {},
-        "operationId": "get-toms"
+        "operationId": "get-toms",
+        "description": "Get This Tom"
       },
       "post": {
         "summary": "post Toms",
