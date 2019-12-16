@@ -32,5 +32,21 @@
         }
       }
     }
+  },
+  "components": {
+    "schemas": {
+      "SingMod": {
+        "title": "SingMod",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "isSingleModel": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
   }
 }
