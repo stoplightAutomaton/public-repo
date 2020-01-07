@@ -64,4 +64,10 @@ paths:
                 minLength: 4
               description: geegrw
 components:
-  schemas: {}
+  schemas:
+    model:
+      title: model
+      type: object
+      properties:
+        id:
+          type: string
