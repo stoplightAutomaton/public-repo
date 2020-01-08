@@ -1,12 +1,14 @@
 title: Error
 type: object
 description: A standard error object.
+x-tags:
+  - Common
 properties:
   code:
-    type: string
+    type: object
   message:
+    type: string
+  stuff:
     type: string
 required:
   - code
-x-tags:
-  - Common

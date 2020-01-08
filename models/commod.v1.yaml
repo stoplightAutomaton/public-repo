@@ -3,5 +3,5 @@ type: object
 x-tags:
   - Common
 properties:
-  id:
-    type: string
+  ' ref':
+    $ref: 'https://dojo-stg.stoplight-dev.com/api/nodes.raw?srn=gh/chris-miaskowski/manual-stoplight-tests/reference/cars-api.v1.yaml/components/schemas/Car&mid=37'
