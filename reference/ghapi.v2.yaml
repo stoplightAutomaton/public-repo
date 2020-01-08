@@ -25,4 +25,21 @@ paths:
                 maxLength: 3
                 minLength: 4
 components:
-  schemas: {}
+  schemas:
+    singghapi:
+      title: singghapi
+      type: object
+      x-tags:
+        - pets
+        - Todos
+      properties:
+        id:
+          type: string
+    newtag:
+      title: newtag
+      type: object
+      x-tags:
+        - newtag
+      properties:
+        id:
+          type: string
